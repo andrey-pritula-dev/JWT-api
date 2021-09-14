@@ -81,6 +81,9 @@ async function start() {
                 const result = await userSessions(userData);
                 console.log(result)
                 break;
+            case "exit":
+                process.exit();
+                break;
             default:
                 console.log(`Invalid command > ${action}`);
                 await start();
